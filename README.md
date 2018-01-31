@@ -15,6 +15,7 @@ $ npm install --save @365admin/office365-auditlogparser
 Parse CSV data in this format
 
     CreationDate,UserIds,Operations,AuditData
+[Detailed properties](https://support.office.com/en-us/article/detailed-properties-in-the-office-365-audit-log-ce004100-9e7f-443e-942b-9b04098fcfc3)
 
 
 ```js
