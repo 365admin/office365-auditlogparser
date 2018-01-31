@@ -1,6 +1,6 @@
 {
-  "name": "@codingxo/office365-auditlogparser",
-  "version": "1.0.0",
+  "name": "@365admin/office365-auditlogparser",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {

@@ -3,6 +3,9 @@ var _ = require("lodash");
 var json = require("format-json")
 var fs = require("fs")
 var moment = require("moment")
+
+
+module.exports.parse = function (filename,cb){
 var parser = parse({delimiter: ',',columns :true}, function(err, data){
     if (err) throw err
 
@@ -27,15 +30,39 @@ var parser = parse({delimiter: ',',columns :true}, function(err, data){
             console.log(dt,mailbox,operations,path,subject)
         }else
         {
-            console.log(dt,mailbox,operations)
+            switch (operations) {
+                case "SoftDelete":
+                    line.AuditData.AffectedItems.forEach(item => {
+                        var subject = item.Subject
+                        var path = item.ParentFolder.Path
+                        console.log(dt,mailbox,operations,path,subject)
+                                    
+                    });
+                    break;
+                case "HardDelete":
+                    line.AuditData.AffectedItems.forEach(item => {
+                        var subject = item.Subject
+                        var path = item.ParentFolder.Path
+                        console.log(dt,mailbox,operations,path,subject)
+                                    
+                    });
+                    break;
+            
+                default:
+                    console.log(dt,mailbox,operations)
+                    break;
+            }
+            
             
         }
            
     });
-
+    cb(null,sortedLines)
 
 
     
 });
 
-fs.createReadStream(__dirname+'/AuditLog_2018-01-23_2018-01-31.csv',{encoding:'UTF8'}).pipe(parser);
+fs.createReadStream(filename,{encoding:'UTF8'}).pipe(parser);
+
+}
