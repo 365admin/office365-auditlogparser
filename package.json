@@ -1,0 +1,22 @@
+{
+  "name": "@codingxo/office365-auditlogparser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^2.0.0",
+    "format-json": "^1.0.3",
+    "fs-extra": "^4.0.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.20.1",
+    "underscore": "^1.8.3",
+    "unirest": "^0.5.1",
+    "xlsx": "^0.11.8"
+  }
+}
