@@ -1,14 +1,26 @@
 {
   "name": "@365admin/office365-auditlogparser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "niels@hexatown.com",
+  "contributors": [
+    "niels@hexatown.com"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/365admin/office365-auditlogparser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/365admin/office365-auditlogparser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/365admin/office365-auditlogparser/issues"
+  },
+  
   "dependencies": {
     "csv": "^2.0.0",
     "format-json": "^1.0.3",
